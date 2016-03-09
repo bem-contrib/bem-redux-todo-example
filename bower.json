@@ -1,0 +1,12 @@
+{
+  "name": "bem-redux-todo-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "bem-components": "bem-components#2.4.0",
+    "bem-redux": "git://github.com/rakchaev/bem-redux.git#0.0.1"
+  },
+  "ignore": [
+    "node_modules",
+    "libs"
+  ]
+}

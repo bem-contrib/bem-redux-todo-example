@@ -1,0 +1,15 @@
+{
+  "name": "bem-redux-todo-example",
+  "version": "0.0.1",
+  "devDependencies": {
+    "enb": "^1.2.0",
+    "enb-babel": "^0.4.0-rc.0",
+    "enb-bem-techs": "^2.2.1",
+    "enb-bemxjst": "^5.0.0",
+    "enb-css": "^1.1.0",
+    "enb-js": "^1.1.0",
+    "enb-modules": "^0.2.0",
+    "enb-stylus": "^2.2.0",
+    "ym": "^0.1.2"
+  }
+}
