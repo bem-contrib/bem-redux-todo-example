@@ -2,3 +2,5 @@
 .enb/babel
 node_modules
 libs
+desktop.bundles/index/*
+!desktop.bundles/index/*.bemjson.js

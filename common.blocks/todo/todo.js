@@ -14,7 +14,7 @@ modules.define('todo',
 provide(BEMDOM.decl({ block:this.name, baseBlock: ReduxStateContainer }, /** @lends todo.prototype */{
     onSetMod: {
         js: {
-            inited: function() {
+            inited() {
                 this.__base.apply(this, arguments);
 
                 this.bAddTodoInput = this.findBlockInside('header', 'input');
@@ -46,7 +46,7 @@ provide(BEMDOM.decl({ block:this.name, baseBlock: ReduxStateContainer }, /** @le
      * Dispatch add_todo
      * @param {String} text Todo text
      */
-    addTodo: function(text) {
+    addTodo(text) {
         text = text.trim();
         if (text.length) {
             this.store.dispatch({ type: 'ADD_TODO', text: text });
@@ -59,7 +59,7 @@ provide(BEMDOM.decl({ block:this.name, baseBlock: ReduxStateContainer }, /** @le
      * @param {BEM} targetBlock Interacted BEM block
      * @param {String} actionType Type of action
      */
-    actTodoItem: function(targetBlock, actionType) {
+    actTodoItem(targetBlock, actionType) {
         const $item = targetBlock.domElem.closest('.todo__item');
         const itemId = this.elemParams($item).id;
         this.store.dispatch({ type: actionType, id: itemId });
@@ -68,7 +68,7 @@ provide(BEMDOM.decl({ block:this.name, baseBlock: ReduxStateContainer }, /** @le
     /**
      * Handler of store changing
      */
-    onStoreChange: function() {
+    onStoreChange() {
         const listContentBemjson = this.store.getState().todos.map(todo => ({
             block: 'todo',
             elem: 'item',
@@ -98,7 +98,7 @@ provide(BEMDOM.decl({ block:this.name, baseBlock: ReduxStateContainer }, /** @le
      * @param {String} action.type Type of action
      * @returns {Object} New state
      */
-    rootReducer: function(state, action) {
+    rootReducer(state, action) {
         // You can use Redux.combineReducers here (add module redux in dependencies of ym-module).
         // See http://redux.js.org/docs/api/combineReducers.html
         return {
