@@ -11,7 +11,7 @@ bower i
 
 Run dev server
 ```
-node node_modules/.bin/enb server
+npm run server
 ```
 
 Open page
