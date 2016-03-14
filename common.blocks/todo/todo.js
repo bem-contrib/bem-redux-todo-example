@@ -113,7 +113,7 @@ provide(BEMDOM.decl({ block:this.name, baseBlock: ReduxStateContainer }, /** @le
      * @param {String} action.type Type of action
      * @returns {Object} New state
      */
-    todosReducer: (state, action) => {
+    todosReducer(state, action) {
         switch (action.type) {
             case 'ADD_TODO':
                 return [
